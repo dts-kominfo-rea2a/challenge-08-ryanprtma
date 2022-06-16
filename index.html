@@ -41,18 +41,21 @@
     // Fungsi yang digunakan untuk menambahkan tulisan
     // Jangan ubah cara deklarasi fungsinya, cukup isi saja
     function fnClickHandler(toDoItem) {
-      const list = document.createElement("li")
-      list.textContent = input.value
-      console.log(list)
-      output.appendChild(list)
-      input.value = " "
+      if (event.key == 'Enter' || event.type == 'click') {
+        console.log(toDoItem.type)
+        const list = document.createElement("li")
+        list.textContent = input.value
+        output.appendChild(list)
+        input.value = " "
+      }
     }
 
     // TODO: register event onclick / addEventListener untuk button
     // akan menjalankan fungsi fnClickHandler
     button.addEventListener('click', fnClickHandler)
-      // TODO: register event onkeypress / addEventListener untuk input
-      // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
+    // TODO: register event onkeypress / addEventListener untuk input
+    // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
+    document.addEventListener('keypress', fnClickHandler)
   </script>
 </body>
 
