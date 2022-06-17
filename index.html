@@ -5,25 +5,36 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>Challenge - DOM</title>
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" class="container-app">
     <!-- TODO: Buatlah sebuah header dengan id todo-title -->
     <!-- TODO: Buatlah sebuah subtitle dengan id todo-subtitle -->
-    <h1 id="todo-title"></h1>
-    <h3 id="todo-subtitle"></h3>
+    <div class="header-card">
+      <h1 id="todo-title">TODO</h1>
+      <h3 id="todo-subtitle">Hari ini saya melakukan</h3>
+    </div>
 
     <!-- Section: input -->
     <!-- TODO: Buatlah sebuah input bertipe text dengan id todo-input -->
     <!-- TODO: Buatlah sebuah button dengan id todo-submit -->
-    <input type="text" id="todo-input">
-    <button id="todo-submit">Submit</button>
+    <section>
+      <input type="text" id="todo-input">
+      <button id="todo-submit">Submit</button>
+    </section>
 
     <!-- Section output -->
     <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
-    <ul id="todo-output"></ul>
+    <div>
+      <ul id="todo-output">
+        <li id="todo-list">
+          silahkan isi dengan kegiatan anda...
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- ! Untuk tantangan ini, script jangan diubah ke external js yah ! -->
@@ -31,22 +42,32 @@
     // TODO: Deklarasi variable sesuai dengan kebutuhan di sini
     let button = document.getElementById("todo-submit")
     let input = document.getElementById("todo-input")
-    // let output = document.querySelector("ul")
     let output = document.getElementById("todo-output")
 
+    let li = document.querySelector('ul')
+    const deletedList = document.getElementById("todo-list");
+    setTimeout(alert("click list to remove to do list"), 3000)
 
     // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
     // Fungsi yang digunakan untuk menambahkan tulisan
     // Jangan ubah cara deklarasi fungsinya, cukup isi saja
     function fnClickHandler(toDoItem) {
       if (event.key == 'Enter' || event.type == 'click') {
-        console.log(toDoItem.type)
         const list = document.createElement("li")
         list.textContent = input.value
-        output.appendChild(list)
         input.value = " "
+        output.appendChild(list)
+        deletedList.remove()
       }
     }
+
+    function removedList(e) {
+      const willRemove = e.target
+      willRemove.remove()
+    }
+
+
+    li.addEventListener('click', removedList)
 
     // TODO: register event onclick / addEventListener untuk button
     // akan menjalankan fungsi fnClickHandler

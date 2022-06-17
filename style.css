@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: #ffffff;
+    font-family: 'Robot', sans-serif;
+}
+
+.header-card {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: rgb(182, 64, 228);
+}
+
+h3 {
+    line-height: 0;
+}
+
+.container-app {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 5rem;
+    border-radius: 1em;
+    background-color: #e3e8ef;
+}
+
+#todo-list {
+    text-align: center;
+    padding: 2em;
+    background-color: #e3e8ef;
+    color: rgb(159, 159, 176);
+}
+
+ul {
+    list-style-type: none;
+    width: 89%;
+}
+
+li {
+    background-color: rgb(182, 64, 228);
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-bottom: 10px;
+}
