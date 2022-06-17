@@ -23,7 +23,12 @@
     <!-- TODO: Buatlah sebuah button dengan id todo-submit -->
     <section>
       <input type="text" id="todo-input">
-      <button id="todo-submit">Submit</button>
+      <button id="todo-submit"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true" role="img" class="iconify iconify--ic" width="12" height="12"
+          preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2z"></path>
+        </svg></button>
     </section>
 
     <!-- Section output -->
@@ -46,7 +51,7 @@
 
     let li = document.querySelector('ul')
     const deletedList = document.getElementById("todo-list");
-    setTimeout(alert("click list to remove to do list"), 3000)
+    // setTimeout(alert("click list to remove to do list"), 3000)
 
     // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
     // Fungsi yang digunakan untuk menambahkan tulisan

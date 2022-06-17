@@ -7,27 +7,43 @@ body {
     font-family: 'Robot', sans-serif;
 }
 
+.container-app {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 5rem;
+    border-radius: 1em;
+    background-color: #e3e8ef;
+}
+
 .header-card {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
     align-items: center;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    background-color: rgb(182, 64, 228);
+    background: rgb(253, 21, 10);
+    background: linear-gradient(30deg, rgba(253, 21, 10, 1) 0%, rgba(253, 164, 10, 1) 35%, rgba(222, 78, 253, 1) 100%);
 }
 
 h3 {
     line-height: 0;
 }
 
-.container-app {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-top: 5rem;
+section {
+    padding: 1em;
+}
+
+#todo-input {
     border-radius: 1em;
-    background-color: #e3e8ef;
+    border: none;
+}
+
+#todo-submit {
+    border-radius: 1rem;
+    background-color: #fda40a;
+    border: none;
+    color: white;
 }
 
 #todo-list {
@@ -43,7 +59,7 @@ ul {
 }
 
 li {
-    background-color: rgb(182, 64, 228);
+    background-color: #ff4812;
     padding: 0.5em;
     border-radius: 1em;
     margin-bottom: 10px;
